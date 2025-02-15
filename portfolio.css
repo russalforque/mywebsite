@@ -1,0 +1,333 @@
+
+*{
+  font-family: "Poppins", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link.active {
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+  }
+
+  .contact-btn {
+    text-decoration: none;
+    padding: 10px 17px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    transition: 0.4s ease-in-out;
+  }
+
+  .contact-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+  }
+
+  .navbar-brand {
+    width: 50px;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .links {
+    margin-right: 50px;
+  }
+
+  /* Default styling for nav-links */
+.nav-link {
+  position: relative;
+  padding-bottom: 5px; /* Add some space for the underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect: underline stroke */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000; /* Underline color */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom right; /* Start the animation from the right */
+  transition: transform 0.3s ease-out; /* Smooth underline animation */
+}
+
+/* On hover, show the underline with a stroke effect */
+.nav-link:hover::after {
+  transform: scaleX(1); /* Show the underline */
+  transform-origin: bottom left; /* Animate from the left */
+}
+
+/* Optionally, change the color of the text when hovered */
+.nav-link:hover {
+  color: #007bff; /* Change text color on hover */
+}
+
+
+
+/*HOME*/
+
+.getintouch-btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 17px 15px;
+  background: #000;
+  border-radius: 5px;
+  transition: 0.6s ease;
+
+}
+
+.getintouch-btn:hover {
+  background: #fff;
+  color: #000;
+  border:1px solid black;
+}
+
+
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: inherit;
+  animation: typing 4s steps(30, end) infinite, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+
+
+
+/*SECTION*/
+
+  section {
+    margin-top: 200px;
+  }
+
+
+  .intro {
+    margin-top:100px;
+  }
+
+  .profession {
+    font-size:90px;
+    font-weight: bolder;
+  }
+  
+
+  .profile-img {
+    width: 100%;
+  }
+
+
+
+  /*MY SKILLS*/
+
+  .service-card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.08); 
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.1); 
+}
+
+#services .service-card img {
+  max-width: 80px;
+  height: auto;
+}
+
+#services .service-card h3 {
+  font-size: 1.25rem;
+}
+
+#services .service-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  #services .service-card {
+      margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #services .service-card {
+      padding: 20px;
+  }
+
+  #services .service-card h3 {
+      font-size: 1.1rem;
+  }
+
+  #services .service-card p {
+      font-size: 0.85rem;
+  }
+}
+
+
+
+/*AOBUT ME*/
+
+
+#aboutme img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Rounded corners for the image */
+}
+
+#aboutme .h1 {
+  font-size: 2.5rem; /* Adjusts font size for medium screens */
+}
+
+@media (max-width: 768px) {
+  #aboutme .h1 {
+      font-size: 2rem; /* Smaller font size for smaller devices */
+  }
+
+  #aboutme p {
+      font-size: 1rem; /* Adjust text size for better readability */
+  }
+}
+
+@media (max-width: 576px) {
+  #aboutme .h1 {
+      font-size: 1.8rem; /* Further reduce font size for extra small screens */
+  }
+
+  #aboutme p {
+      font-size: 0.95rem;
+  }
+}
+
+
+
+/*PORTFOLIO*/
+
+
+#portfolio .card img, 
+#portfolio .video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; 
+}
+
+
+@media (max-width: 768px) {
+    #portfolio h3 {
+        font-size: 1.5rem;
+    }
+    #portfolio p {
+        font-size: 1rem;
+    }
+    #portfolio .btn {
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    #portfolio h3 {
+        font-size: 1.3rem;
+    }
+    #portfolio p {
+        font-size: 0.9rem;
+    }
+    #portfolio .btn {
+        width: 70%;
+    }
+}
+
+
+/* Hover effect for portfolio cards */
+.card.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.hover-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img,
+.card video {
+  transition: transform 0.3s ease;
+}
+
+.card img:hover,
+.card video:hover {
+  transform: scale(1.05);
+}
+
+
+
+/*FOOTER*/
+
+
+.footer-links {
+  list-style: none;
+}
+.footer-links li a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 30px;
+}
+footer {
+  margin-top: 100px;
+}
+
+
+
+.bi {
+  font-size: 20px;
+  margin-right: 20px;
+  color: #000;
+  
+}
+
+
