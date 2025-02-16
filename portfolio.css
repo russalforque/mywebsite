@@ -327,7 +327,10 @@ footer {
   font-size: 20px;
   margin-right: 20px;
   color: #000;
-  
 }
 
+
+.social-icons {
+  text-decoration: none;
+}
 
